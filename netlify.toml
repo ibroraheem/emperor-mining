@@ -2,8 +2,11 @@
   command = "npm run build"
   publish = ".next"
 
+# Pinned to v4: v5 dropped Netlify Forms support entirely.
+# Upgrade to v5 only after migrating the contact form to a
+# Netlify Function or third-party form endpoint.
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs@4"
 
 # Redirect all routes to Next.js (handled by the plugin, but listed for clarity)
 [[redirects]]
