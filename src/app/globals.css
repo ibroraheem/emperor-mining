@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Resets & Global Styles ─────────────────────────────────────────── */
+@layer base {
+  /* Smooth scrolling for anchor navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent layout shift from scrollbar appearing/disappearing */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Default focus visible style using brand orange */
+  *:focus-visible {
+    outline: 2px solid #E87722;
+    outline-offset: 3px;
+  }
+}
+
+/* ─── Component Utilities ─────────────────────────────────────────────────── */
+@layer components {
+  /* Reusable section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Reusable section padding */
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  /* Orange label that appears above section headings */
+  .section-label {
+    @apply text-mining-orange text-sm font-semibold tracking-[0.2em] uppercase mb-3 block;
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    @apply bg-mining-orange text-white font-semibold px-8 py-3 rounded-full
+           hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  /* Secondary / outlined CTA button */
+  .btn-outline {
+    @apply border-2 border-white text-white font-semibold px-8 py-3 rounded-full
+           hover:bg-white hover:text-mining-black transition-all duration-300 inline-flex items-center gap-2;
+  }
+}
+
+/* ─── WhatsApp Pulse Ring Animation ──────────────────────────────────────── */
+@keyframes whatsapp-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #25D366;
+  animation: whatsapp-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

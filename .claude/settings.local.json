@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\opeib\\\\Desktop\\\\emperor-mining\\\\public\\\\images\")",
+      "PowerShell(\"Directory created\")",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\opeib\\\\Desktop\\\\emperor-mining\\\\public\\\\images\" | Where-Object { $_.Extension -ne \".txt\" } | Select-Object Name, Length | Sort-Object Name)",
+      "Bash(cp IMG-20260501-WA0002.jpg hero-bg.jpg)",
+      "Bash(cp IMG-20260501-WA0024.jpg about-operations.jpg)",
+      "Bash(cp IMG-20260501-WA0013.jpg emc-logo.jpg)",
+      "Bash(cp IMG-20260501-WA0026.jpg gallery-open-pit-panoramic.jpg)",
+      "Bash(cp IMG-20260501-WA0029.jpg gallery-drill-rig-operations.jpg)"
+    ]
+  }
+}
