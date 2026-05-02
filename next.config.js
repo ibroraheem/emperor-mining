@@ -14,6 +14,8 @@ const nextConfig = {
     ],
     // Recommended formats for performance
     formats: ['image/avif', 'image/webp'],
+    // Disable Next.js image optimization to fix Netlify production display issues
+    unoptimized: true,
   },
   // Strict mode for catching potential issues early
   reactStrictMode: true,
