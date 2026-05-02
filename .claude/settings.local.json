@@ -8,7 +8,8 @@
       "Bash(cp IMG-20260501-WA0024.jpg about-operations.jpg)",
       "Bash(cp IMG-20260501-WA0013.jpg emc-logo.jpg)",
       "Bash(cp IMG-20260501-WA0026.jpg gallery-open-pit-panoramic.jpg)",
-      "Bash(cp IMG-20260501-WA0029.jpg gallery-drill-rig-operations.jpg)"
+      "Bash(cp IMG-20260501-WA0029.jpg gallery-drill-rig-operations.jpg)",
+      "Bash(python -c ' *)"
     ]
   }
 }
